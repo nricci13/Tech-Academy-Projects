@@ -1,0 +1,23 @@
+.font_1 {
+    background-color: black;
+    color: yellow;
+    font-size: large;
+}
+.font_2 {
+    background-color: darkblue;
+    color: white;
+    font-size: medium;
+}
+.My_Style {
+    background-color: bisque;
+    color: black;
+    border: orange;
+    font-family: "Lucida Console";
+}
+p {
+    background-color: orange;
+    color: red;
+    font-size: large;
+    text-align: justify;
+    text-shadow: 2px 2px white;
+}

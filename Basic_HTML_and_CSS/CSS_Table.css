@@ -1,0 +1,16 @@
+/*table {
+    border: 2px solid black;
+}*/
+tr, th {
+    background-color: red;
+    color: black;
+}
+tr, td {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+td:hover {
+    background-color: bisque;
+}
