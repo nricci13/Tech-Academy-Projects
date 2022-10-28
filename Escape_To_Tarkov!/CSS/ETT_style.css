@@ -12,7 +12,6 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.42857143;
     color: #333;
-    background-color: rgba(49, 141, 53, 0.212);
 }
 
 footer, nav {
@@ -83,6 +82,7 @@ section {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    background-color: rgba(49, 141, 53, 0.212);
 }
 
 .container-fluid {
@@ -137,11 +137,17 @@ section {
     padding-bottom: 500px;
     color: #fff;
 }
+.home-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .head-main {
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 4px 5px rgba(70, 21, 21, 0.9);
     font-variant: small-caps;
-    color: #fff;
+    color: #000;
     letter-spacing: 5pt;
     word-spacing: 21pt;
     font-size: 4.5em;
@@ -149,7 +155,8 @@ section {
     font-family: impact, sans-serif;
     line-height: 2;
     font-weight: 900;
-    border: 5px double #fff;
+    border: 5px double #000;
+    box-shadow: 2px 4px 5px rgba(70, 21, 21, 0.9);
     padding: 10px;
 }
 
@@ -256,7 +263,7 @@ section {
     font-family: 'Raleway', sans-serif; 
 }
 
-reservation input[type="text"]:hover {
+.reservation input[type="text"]:hover {
     box-shadow: 0 0 18px rgba(100, 65, 0, 0.8);
 }
 
@@ -268,6 +275,7 @@ reservation input[type="text"]:hover {
     margin: 30px 1px 0 0;
     margin-top: 13%;
     padding-left: 52px;
+    padding-bottom: 8px;
     font-size: 14px;
     line-height: 5px;
     color: #000;
@@ -309,6 +317,7 @@ reservation input[type="text"]:hover {
 }
 
 /* FOOTER STYLES */
+
 #footer {
     background-color: rgba(100, 65, 0, .3);
     color: #000;
@@ -318,6 +327,19 @@ reservation input[type="text"]:hover {
 }
 
 /* GALLERY SECTION */
+
+#gallery{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+}
+
+#gallery h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
 
 p {
     font-weight: 300;
