@@ -1,0 +1,88 @@
+body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+#main {
+    position: relative;
+    background-color: darkgreen;
+    margin: 0;
+    padding: 0;
+}
+#nav {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+    font-size: large;
+}
+#nav_home {
+    position: absolute;
+    left: 25%;
+    background-color: white;
+    padding: 25px;
+}
+#nav_gallery {
+    position: absolute;
+    left: 50%;
+    background-color: white;
+    padding: 25px;
+}
+#nav_contact {
+    position: absolute;
+    left: 75%;
+    background-color: white;
+    padding: 25px;
+}
+#title {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#gallery {
+    background-color: bisque;
+}
+#gallery_title {
+    position: relative;
+    top: 25px;
+    font-size: 50px;
+    color: darkgreen;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}   
+.column_1 {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 1px;
+    background-color: green;
+    margin: 50px 10%;
+    border: 1px solid black;
+}
+.column_2 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    padding: 1px;
+    background-color: green;
+    margin: 50px 10%;
+    border: 1px solid black;
+}
+#contact {
+    background-color: rgba(231, 54, 0, 0.74);
+    text-align: center;
+    padding: 50px;
+}
+
+.rsvp {
+    height: 25px;
+    max-width: 200px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
