@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Nicholas Ricci</title>
+        <meta name="viewport" content="width=device-width" />
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./CSS/portfoli_style.css">
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <a class="active" href="#Home">Home</a>
+            <a class="dropdown" href="#">Projects
+                <!-- <ul class="nested-list"> -->
+                <div class="nested-list">
+                    <p>Escape to Tarkov</p>
+                    <p>Euchre</p>
+                    <p>Uh-Oh Tool</p>
+                </div>
+                <!-- </ul> -->
+            </a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <!-- END NAVBAR -->
+
+        <br>
+        <br>
+        <!-- COLUMNS -->
+            <div class="background">
+                <!-- ABOUT ROW -->
+                <div class="row">
+                    <div class="column">
+                        <img class="profile-pic" src="./img/profile.jpg" alt="Profile photo of me">
+                    </div>
+                    <div class="column">
+                        <h1>About Me</h1>
+                        <p>I come from an engineering background and have an aerospace engineering degree which I made use for several years.
+                            I eventually came to realize software development was role I could better see myself being happy in made the decision to develop these new skills.
+                            I am now a graduate of The Tech Company bootcamp and skilled in HTML, CSS, and Javascript.
+                        </p>
+                        <p>Read on below to learn a bit about my career and projects.</p>
+                    </div>
+                </div>
+                <!-- END ABOUT ROW -->
+
+                <!-- GITHUB ROW -->
+                <div class="row">
+                    <div class="column">
+                        <h1>Github Profile</h1>
+                        <p>You can view the code behind my projects on my Github profile linked below.</p>
+                        <a href="https://github.com/nricci13">Nicholas Ricci's Github</a>
+                    </div>
+                    <div class="column">
+                        
+                    </div>
+                </div>
+                <!-- END GITHUB ROW -->
+
+                <!-- CONTACT ROW -->
+                <div class="row">
+                    <div class="column">
+                        <img class="contact" src="./img/Contact.jpg" alt="Contact_Image">
+                    </div>
+                    <div class="column">
+                        <h1>Contact</h1>
+                        <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                            <label>Name:</label>
+                                <input type="text" placeholder="Please enter your name here">
+                            <label>Email:</label>
+                                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                            <label>Message:</label>
+                                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                                <input type="submit" value="SUBMIT">
+                        </form>
+                    </div>
+                </div>
+                <!-- END CONTACT ROW -->
+            </div>
+        <!-- END COLUMNS -->
+
+        <footer>
+
+        </footer>
+
+    </body>
+</html>

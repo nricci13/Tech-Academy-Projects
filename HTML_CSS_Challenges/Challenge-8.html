@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Challenge 8</title>
+        <meta charset="utf-8">
+    </head>
+    <style>
+       .container {
+        position: relative;
+       }
+
+       img {
+        width: 100%;
+        height: auto;
+       }
+
+       .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: orangered;
+       }
+
+       .overlay:hover {
+            opacity: 0.5;
+       }
+
+       .text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: blue;
+        font-size: 64px;
+       }
+    </style>
+    <body>
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1662660810141-8faac6521f03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+            <div class="overlay">
+                <p class="text">Hello World</p>
+            </div>
+        </div>
+    </body>
