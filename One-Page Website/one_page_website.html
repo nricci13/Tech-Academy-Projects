@@ -3,6 +3,7 @@
     <head>
         <title>Escape To Tarkov!</title>
         <meta charset="utf-8">
+        <script src="JS/one_page_website.js" defer></script>
         <link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">    
     </head>
 
@@ -44,7 +45,7 @@
                     <!-- PHOTO CONTAINER 1-->
                     <div class="column_1">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_1.jpeg" alt="Killa" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_1.jpeg" alt="Killa" onclick="openModal();currentSlide(1)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -56,7 +57,7 @@
                     <!-- PHOTO CONTAINER 2-->
                     <div class="column_2">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_2.jpeg" alt="Welcome to Tarkov" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_2.jpeg" alt="Welcome to Tarkov" onclick="openModal();currentSlide(2)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -68,7 +69,7 @@
                     <!-- PHOTO CONTAINER 3-->
                     <div class="column_1">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_3.jpg" alt="Tarkov Poster" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_3.jpg" alt="Tarkov Poster" onclick="openModal();currentSlide(3)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -80,7 +81,7 @@
                     <!-- PHOTO CONTAINER 4-->
                     <div class="column_2">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_4.jpg" alt="Sanitar" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_4.jpg" alt="Sanitar"  onclick="openModal();currentSlide(4)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -92,7 +93,7 @@
                     <!-- PHOTO CONTAINER 5-->
                     <div class="column_1">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_5.jpg" alt="Residents" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_5.jpg" alt="Residents"  onclick="openModal();currentSlide(5)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -104,7 +105,7 @@
                     <!-- PHOTO CONTAINER 6-->
                     <div class="column_2">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_6.webp" alt="Customs map" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_6.webp" alt="Customs map" onclick="openModal();currentSlide(6)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -116,7 +117,7 @@
                     <!-- PHOTO CONTAINER 7-->
                     <div class="column_1">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_7.webp" alt="Lighthouse" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_7.webp" alt="Lighthouse" onclick="openModal();currentSlide(7)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -128,7 +129,7 @@
                     <!-- PHOTO CONTAINER 8-->
                     <div class="column_2">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_8.webp" alt="Mall" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_8.webp" alt="Mall" onclick="openModal();currentSlide(8)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -140,7 +141,7 @@
                     <!-- PHOTO CONTAINER 9-->
                     <div class="column_1">
                         <div>
-                            <img src="./Images/Thumb/thumbnail_9.webp" alt="Resort" width="600px" height="400px">
+                            <img src="./Images/Thumb/thumbnail_9.webp" alt="Resort" onclick="openModal();currentSlide(9)" width="600px" height="400px">
                             <div>
                                 <h3>Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
@@ -150,13 +151,113 @@
                     <!-- END PHOTO CONTAINER 9-->
                 </div>
                 <div style="border: 0px solid black;">
-                    <p style="text-align: center; color: darkgreen;">Watch the video below to see testimony from some of Tarkov's most infamous visitors!<br>
+                    <p style="text-align: center; color: darkgreen; margin: 0; padding: 10px;">Watch the video below to see testimony from some of Tarkov's most infamous visitors!<br>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/UPnrY5BxddI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </p>
                 </div>
             </div>
         </section>
         <!-- END GALLERY -->
+
+        <!-- LIGHTBOX -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_1.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_2.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_4.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_5.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_6.webp" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_7.webp" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_8.webp" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_9.webp" style="width:100%">
+                </div>
+
+                <!-- ARROWS -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- CAPTION -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- THUMBNAIL CONTROLS -->
+                
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_1.jpeg" onclick="currentSlide(1)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_2.jpeg" onclick="currentSlide(2)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_3.jpg" onclick="currentSlide(3)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_4.jpg" onclick="currentSlide(4)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_5.jpg" onclick="currentSlide(5)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_6.webp" onclick="currentSlide(6)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_7.webp" onclick="currentSlide(7)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_8.webp" onclick="currentSlide(8)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_9.webp" onclick="currentSlide(9)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- END LIGHTBOX -->
 
         <!-- RSVP -->
         <section>
