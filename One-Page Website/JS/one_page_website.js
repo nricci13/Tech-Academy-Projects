@@ -34,3 +34,17 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('fade-out');
+});
+
+function validateForm() {
+    // for (i = 0; i < document.forms['rsvp-form'].length; i++) {
+        let x = document.forms['rsvp-form']['pNum'];
+        if (x == "") {
+            alert("All fields must be filled out");
+            return false
+        }
+    // }
+}

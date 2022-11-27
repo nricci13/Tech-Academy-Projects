@@ -272,11 +272,11 @@
                             Please provide us with your basic contact information.
                         </p>
                         <div>
-                            <form action="" method="post">
-                                <input class="rsvp" type="text" value="First Name">
-                                <input class="rsvp" type="text" value="Last Name">
-                                <input class="rsvp" type="text" value="Email Address">
-                                <input class="rsvp" type="text" value="Phone Number">
+                            <form name="rsvp-form" action="" method="post" onsubmit="return validateForm()">
+                                <input class="rsvp" type="text" value="First Name" name="fName">
+                                <input class="rsvp" type="text" value="Last Name" name="lName">
+                                <input class="rsvp" type="text" value="Email Address" name="email">
+                                <input class="rsvp" type="text" value="Phone Number" name="pNum" >
                                 <div class="form-spacer">
                                     <label class="terms"> Terms and Conditions</label>
                                 </div>
@@ -296,5 +296,9 @@
             wwww.escapetotarkov.com &nbsp;|&nbsp; &copy; 2022
         </div>
         <!-- END FOOTER -->
+
+        <script>
+            document.body.classList.add('fade-out');
+        </script>
     </body>
 </html>
