@@ -3,13 +3,14 @@
     <head>
         <title>Escape To Tarkov!</title>
         <meta charset="utf-8">
+        <script src="JS/ETT.js" defer></script>
         <link rel="stylesheet" href="./CSS/ETT_style.css">    
         <link rel="stylesheet" href="./CSS/animations.css">   
     </head>
     <body>
         
         <!-- NAV -->
-        <div class="wrap">
+        <div class="wrap" id="nav">
             <div class="menu-container">
                 <ul class="menu">
                     <a href="#home"><li>HOME</li></a>
@@ -39,7 +40,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_1.jpeg" alt="Killa">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(1)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>Only the kindest and most fashionable of hosts.</p>
                             </div>
@@ -51,7 +52,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_2.jpeg" alt="Welsome to Tarkov">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(2)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>A wonderful and welcoming community!</p>
                             </div>
@@ -63,7 +64,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_3.jpg" alt="Tarkov Poster">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(3)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>We have several drop planes launching daily, book your flight today!</p>
                             </div>
@@ -75,7 +76,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_4.jpg" alt="Sanitar">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(4)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>Medical professionals always on-site ready for any of your emergency vacation needs.</p>
                             </div>
@@ -87,7 +88,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_5.jpg" alt="Residents">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(5)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>Recognize any our most famous residents?</p>
                             </div>
@@ -99,7 +100,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_6.webp" alt="Customs">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(6)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>Sprawling grounds with a variety of locales to fit your mood.</p>
                             </div>
@@ -111,7 +112,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_7.webp" alt="Lighthouse">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(7)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>Meet with our enigmatic and mysterious Lightkeeper. You won't regret it!</p>
                             </div>
@@ -123,7 +124,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_8.webp" alt="Mall">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(8)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>We have a fully stocked mall on-site for any of your last minute needs.</p>
                             </div>
@@ -135,7 +136,7 @@
                     <div class="photo-container">
                         <div class="photo">
                             <img src="./Images/Thumb/thumbnail_9.webp" alt="Resort">
-                            <div class="photo-overlay">
+                            <div class="photo-overlay" onclick="openModal();currentSlide(9)">
                                 <h3 class="white-head">Click to Enlarge</h3>
                                 <p>Don't forget to stop by our state-of-the-art resort location!</p>
                             </div>
@@ -148,6 +149,106 @@
         </section>
         <!-- END GALLERY -->
 
+         <!-- LIGHTBOX -->
+         <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_1.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_2.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_4.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_5.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_6.webp" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_7.webp" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_8.webp" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 9</div>
+                    <img src="./Images/Thumb/thumbnail_9.webp" style="width:100%">
+                </div>
+
+                <!-- ARROWS -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- CAPTION -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- THUMBNAIL CONTROLS -->
+                
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_1.jpeg" onclick="currentSlide(1)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_2.jpeg" onclick="currentSlide(2)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_3.jpg" onclick="currentSlide(3)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_4.jpg" onclick="currentSlide(4)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_5.jpg" onclick="currentSlide(5)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_6.webp" onclick="currentSlide(6)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_7.webp" onclick="currentSlide(7)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_8.webp" onclick="currentSlide(8)" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="./Images/Thumb/thumbnail_9.webp" onclick="currentSlide(9)" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- END LIGHTBOX -->
+
         <!-- RSVP -->
         <div id="contact">
             <div class="container">
@@ -159,18 +260,18 @@
                         </h2>
                         <p class="rsvp-text" style="text-align: center">Please provide us with your contact information</p>
                         <div class="form-rsvp">
-                            <form action="" method="post">
-                                <input class="rsvp" type="text" value="" placeholder="First Name">
-                                <input class="rsvp" type="text" value="" placeholder="Last Name">
-                                <input class="rsvp" type="text" value="" placeholder="Phone Number">
-                                <input class="rsvp" type="text" value="" placeholder="Email">
+                            <form name="rsvp-form" action="" method="post" onsubmit="return validateForm()">
+                                <input class="rsvp" type="text" value="First Name" name="fName">
+                                <input class="rsvp" type="text" value="Last Name" name="lName">
+                                <input class="rsvp" type="text" value="Email Address" name="email">
+                                <input class="rsvp" type="text" value="Phone Number" name="pNum">
+                                <div class="form-spacer">
+                                    <label class="terms">Terms and Conditions</label>
+                                </div>
+                                <div class="submit">
+                                    <input type="submit" value="Submit">
+                                </div>
                             </form>
-                            <div class="form-spacer">
-                                <label class="terms">Terms and Conditions</label>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="Submit">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,5 +285,8 @@
         </div>
         <!-- END FOOTER -->
 
+        <script>
+            document.body.classList.add('fade-out');
+        </script>
     </body>
 </html>

@@ -4,6 +4,7 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +13,23 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.42857143;
     color: #333;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+#home img {
+    animation: zoomInOut 3s;
+}
+
+@keyframes zoomInOut {
+    0% {transform: scale(1,1,);}
+    50% {transform: scale(1.5, 1.5);}
+    100% {transform: scale(1, 1);}
 }
 
 footer, nav {
@@ -174,6 +192,107 @@ section {
     border: 1px dotted #fff;
     padding: 5px;
 }
+
+/* LIGHTBOX */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.column {
+    float: left;
+    width: 10%;
+    padding-bottom: 30px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;   
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+  }
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+  
+img.demo {
+    opacity: 0.6;
+    width: 100%;
+    height: auto;
+}
+  
+.active, .demo:hover {
+    opacity: 1;
+}
+
 
 /* CONTACT STYLES */
 

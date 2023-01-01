@@ -22,14 +22,7 @@ body.fade-out {
 }
 
 #home img {
-    animation: zoomInOut 3s;
-}
-
-@keyframes zoomInOut {
-    0% {transform: scale(1,1,);}
-    50% {transform: scale(1.5, 1.5);}
-    100% {transform: scale(1, 1);}
-}
+ 
 
 #nav {
     position: absolute;
